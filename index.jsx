@@ -1,3 +1,30 @@
+/* from https://paladini.dev */
+export const ToolTip = (props) => {
+  let timeout;
+  const [active, setActive]=useState(false);
+  const showTip = () => {
+    timeout = setTimeout(()=>{
+      setActive(true);
+    }, props.delay || 400);
+  };
+  
+  const hideTip = () => {
+    clearInterval(timeout);
+    setActive(false);
+  };
+  return (
+    <div className = "Tooltip-Wrapper"
+         onMouseEnter={showTip}
+         onMouseLeave={hideTip}>
+      {props.children}
+      {active && (
+           <div className={`Tooltip-Tip ${props.direction || "top"}`}>
+             {props.content}
+           </div>
+       )}
+    </div>)
+};
+
 export const MoodBoardItem = ({ color, image, description }) => {
   return (
       <div className="mood-board-item" style={{
