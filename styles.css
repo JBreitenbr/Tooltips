@@ -47,7 +47,38 @@
   top: 100%;
   border-top-color:var(--tooltip-background-color);
 }
+.Tooltip-Tip.right {
+  left: calc(100% + var(--tooltip-margin));
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+.Tooltip-Tip.right::before {
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+  left: calc(var(--tooltip-arrow-size)*-1);
+  border-right-color:var(--tooltip-background-color);
+}
+.Tooltip-Tip.bottom {
+  bottom: calc(var(--tooltip-margin)*-1);
+}
+.Tooltip-Tip.bottom::before {
+  bottom: 100%;
+  border-bottom-color:var(--tooltip-background-color);
+}
 
+.Tooltip-Tip.left {
+  left:auto;
+  right: calc(100% + var(--tooltip-margin));
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+}
+.Tooltip-Tip.left::before {
+  left:auto;
+  top: 50%;
+  transform: translateX(0) translateY(-50%);
+  right: calc(var(--tooltip-arrow-size)*-1);
+  border-left-color:var(--tooltip-background-color);
+  }
 body {
   background-color: #ffffcc;
 }
