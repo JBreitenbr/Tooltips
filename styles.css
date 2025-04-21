@@ -5,6 +5,7 @@
   --tooltip-arrow-size: 6px;
 }
 .geom {
+  margin-top: 100px;
   width: 200px;
   height: 100px;
   background-color: salmon;
