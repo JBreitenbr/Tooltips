@@ -4,7 +4,11 @@
   --tooltip-margin: 30px;
   --tooltip-arrow-size: 6px;
 }
-
+.geom {
+  width: 200px;
+  height: 100px;
+  background-color: salmon;
+}
 .Tooltip-Wrapper {
   display: inline-block;
   position: relative;
